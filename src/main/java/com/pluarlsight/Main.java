@@ -15,10 +15,10 @@ public class Main {
 
         // Create a new employee and punch in
         Employee employee = new Employee(1, "John Doe", "Housekeeping", 15.00);
-        employee.punchTimeCard(9);
+        employee.punchIn();
 
         // Employee works for 8.5 hours and punches out
-        employee.punchTimeCard(17);
+        employee.punchOut();
         System.out.println("Hours worked: " + employee.getHourWorked());
         System.out.println("Total pay: " + employee.getTotalPay());
         System.out.println("Regular hours: " + employee.getRegularHours());
