@@ -21,6 +21,9 @@ public class Employee {
         this.hourWorked = hourWorked;
         this.startTime = 0.00;
     }
+    public Employee(){
+        this.startTime = 0.00;
+    }
 
     public int getEmployeeId() {
         return employeeId;
@@ -94,6 +97,14 @@ public class Employee {
         hourWorked+= duration;
         startTime = 0;
 
+    }
+    public void punchIn(double startTime){
+        this.startTime = startTime;
+    }
+    public void punchOut(double time){
+        double duration = time - this.startTime;
+        hourWorked+= duration;
+        this.startTime = 0;
     }
 
 }
