@@ -19,7 +19,7 @@ public class Hotel {
         this.numberOfSuites = numberOfSuites;
     }
     public boolean bookRoom(int numberOfRooms, boolean isSuite){
-        if(this.numberOfRooms- this.bookedRooms == 0|| this.numberOfSuites - this.bookedSuites == 0){
+        if(getAvailableRooms() == 0|| getAvailableSuites() == 0){
             return false;
         }
         if(isSuite){
@@ -30,6 +30,14 @@ public class Hotel {
 
 
 
+
+    }
+    public int getAvailableRooms(){
+       return this.numberOfRooms- this.bookedRooms;
+
+    }
+    public int getAvailableSuites(){
+        return this.numberOfSuites - this.bookedSuites;
 
     }
 
